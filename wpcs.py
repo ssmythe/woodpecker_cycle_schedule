@@ -25,7 +25,7 @@ def generate_schedule(start_date, start_problems_per_day, total_problems):
             # Add a divider between cycles
             if prev_problems_per_day != problems_per_day and day == 1:
                 calendar.append(("----------", "-----", "-----------------", "------------", "----------"))
-            calendar.append((current_date.strftime('%Y-%m-%d'), cycle_number, problems_per_day, day, f"{problem_start}-{problem_end}"))
+            calendar.append((current_date.strftime('%Y-%m-%d'), str(cycle_number), str(problems_per_day), str(day), f"{problem_start}-{problem_end}"))
             current_date += timedelta(days=1)
             problem_start = problem_end + 1  # Set the start for the next day
         prev_problems_per_day = problems_per_day
@@ -36,7 +36,7 @@ def generate_schedule(start_date, start_problems_per_day, total_problems):
     # Add a divider before the final day
     calendar.append(("----------", "-----", "-----------------", "------------", "----------"))
     # Add the final day where all problems are solved
-    calendar.append((current_date.strftime('%Y-%m-%d'), cycle_number, total_problems, 1, f"{problem_start}-{total_problems}"))
+    calendar.append((current_date.strftime('%Y-%m-%d'), str(cycle_number), str(total_problems), '1', f"{problem_start}-{total_problems}"))
     
     return calendar
 
@@ -47,7 +47,8 @@ total_problems = 306
 
 schedule = generate_schedule(start_date, start_problems_per_day, total_problems)
 
-# Print the table with the new column for problem range
+# Print the table with the new column for problem range using spaces for formatting instead of tabs
 print("Date       | Cycle | Problems Per Day  | Day of Cycle | Problem Range")
 for entry in schedule:
-    print(f"{entry[0]} | {entry[1]:<5} | {entry[2]:<17} | {entry[3]:<12} | {entry[4]}")
+    # Join the entry fields with ' | ' separator and align with spaces
+    print(' | '.join(field.ljust(width) for field, width in zip(entry, [10, 5, 17, 12, 9])))

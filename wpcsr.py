@@ -31,12 +31,12 @@ def generate_schedule(start_date, start_problems_per_day, total_problems):
 
             if prev_problems_per_day != problems_per_day and day == 1:
                 calendar.append(
-                    ("----------", "-----", "-----------------", "------------", "----------------------------------------------------------------"))
+                    ("----------", "-----", "-----------------", "------------", "----------------------------------"))
             problems_str = ', '.join(map(str, day_problems))
 
             initial_space = ' | '.join(
                 [" " * width for width in [10, 5, 17, 12]]) + " | "
-            max_width = 120 - len(initial_space)
+            max_width = 90 - len(initial_space)
             wrapped_problems = textwrap.wrap(problems_str, width=max_width)
 
             # Fix: Correctly handling the addition of wrapped lines to the calendar
@@ -57,7 +57,7 @@ def generate_schedule(start_date, start_problems_per_day, total_problems):
 
     # Final day processing
     calendar.append(
-        ("----------", "-----", "-----------------", "------------", "----------------------------------------------------------------"))
+        ("----------", "-----", "-----------------", "------------", "----------------------------------"))
     final_day_problems = list(range(1, total_problems + 1))
     random.shuffle(final_day_problems)
     final_problems_str = ', '.join(map(str, final_day_problems))
@@ -73,7 +73,7 @@ def generate_schedule(start_date, start_problems_per_day, total_problems):
 
 
 # Example usage:
-start_date = "2023-10-25"
+start_date = "2024-04-08"
 start_problems_per_day = 6
 total_problems = 306
 

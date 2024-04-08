@@ -41,7 +41,7 @@ def generate_schedule(start_date, start_problems_per_day, total_problems):
     return calendar
 
 # Example usage:
-start_date = "2023-10-25"
+start_date = "2024-04-08"
 start_problems_per_day = 6
 total_problems = 306
 

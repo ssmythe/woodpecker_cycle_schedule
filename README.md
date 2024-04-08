@@ -47,3 +47,11 @@ Date       | Cycle | Problems Per Day | Day of Cycle
 ## Randomized version (wpcsr.py)
 
 Randomizing the problem set helps prevent the learner from associating the solution of one problem with its position in a sequence, fostering deeper understanding and retention. This technique leverages the cognitive benefits of varied practice, where encountering problems in a non-fixed order encourages the brain to form more robust neural pathways and apply concepts flexibly. It counters the risk of rote memorization, prompting learners to engage with the underlying principles of each problem rather than relying on pattern recognition based on sequence. Consequently, this approach enhances problem-solving skills, promotes adaptive learning, and improves the ability to transfer knowledge to new, unfamiliar contexts.
+
+## Spaced Repetition version (srs.py)
+
+The spaced repetition method is a learning technique that strategically increases the time intervals between reviews of previously learned material. This approach is grounded in the psychological spacing effect, which suggests that information is more effectively remembered and internalized when study sessions are spaced out over time, rather than when massed together in a short period.
+
+By reintroducing concepts and problems at gradually increasing intervals—often starting with a day, then expanding to several days, and eventually weeks—the learner's memory is optimally challenged just as it begins to fade. This timing encourages deeper cognitive processing and reinforces memory retention, making the material more resistant to being forgotten.
+
+The benefits of spaced repetition include enhanced long-term retention of information, improved recall speed, and a more efficient use of study time. It is particularly effective for cumulative subjects and skills development, where foundational knowledge needs to be solidified to support more advanced learning. This method adapts well to individual learning paces and can be tailored based on personal performance, making it a versatile tool for both academic study and lifelong learning.

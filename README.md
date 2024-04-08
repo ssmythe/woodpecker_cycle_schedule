@@ -43,3 +43,7 @@ Date       | Cycle | Problems Per Day | Day of Cycle
 ...
 2024-02-05 | 7     | 306              | 1
 ```
+
+## Randomized version (wpcsr.py)
+
+Randomizing the problem set helps prevent the learner from associating the solution of one problem with its position in a sequence, fostering deeper understanding and retention. This technique leverages the cognitive benefits of varied practice, where encountering problems in a non-fixed order encourages the brain to form more robust neural pathways and apply concepts flexibly. It counters the risk of rote memorization, prompting learners to engage with the underlying principles of each problem rather than relying on pattern recognition based on sequence. Consequently, this approach enhances problem-solving skills, promotes adaptive learning, and improves the ability to transfer knowledge to new, unfamiliar contexts.
